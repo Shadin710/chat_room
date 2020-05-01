@@ -33,5 +33,9 @@ app.get('/',(req,res)=>{
 
     io.on('connection',(socket)=>{
         console.log(`socket connected...${socket.id}`);
+
+        socket.on('chat',(data)=>{
+            io.sockets.emit('chat',data);
+        });
     });
 });

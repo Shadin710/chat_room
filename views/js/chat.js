@@ -11,3 +11,7 @@ btn.addEventListener('click',()=>{
         message: message.value
     });
 });
+
+socket.on('chat',(data)=>{
+    output.innerHTML += '<p><strong>'+data.handle+'</strong> <br>'+data.message+'</p>';
+})
