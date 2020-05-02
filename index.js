@@ -25,8 +25,6 @@ const server = app.listen(port,()=>{
     console.log(`listening to ${port}....`)
 });
 
-
-
 app.get('/',(req,res)=>{
     res.render('index');
     const io= socket(server);
