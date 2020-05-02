@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 
 
-const port = process.env.PORT;
+const port = process.env.PORT ||3000;
 const server = app.listen(port,()=>{
 
     console.log(`listening to ${port}....`)
